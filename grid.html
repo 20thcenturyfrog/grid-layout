@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гриды</title>
+    <style>
+      header {
+        background-color: cadetblue;
+        grid-area: header;
+      }
+
+      aside {
+        background-color: darksalmon;
+        grid-area: aside;
+      }
+
+      main {
+        background-color: lemonchiffon;
+        grid-area: main;
+      }
+
+      footer {
+        background-color: mediumaquamarine;
+        grid-area: footer;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 10% 1fr 10%;
+        height: 90vh;
+        grid-template-areas:
+          "header header header header"
+          "aside main main main"
+          "footer footer footer footer";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Гриды</h1>
+    <div class="container">
+      <header>header</header>
+      <aside>sidebar</aside>
+      <main>content</main>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
