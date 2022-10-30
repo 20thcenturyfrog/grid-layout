@@ -1,0 +1,103 @@
+header,
+main,
+section,
+nav,
+aside,
+footer,
+div {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header,
+footer {
+  background-color: rgb(226, 226, 226);
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  justify-items: center;
+  align-items: center;
+}
+
+main {
+  background-color: rgb(255, 250, 212);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-area: main;
+  justify-items: center;
+}
+
+.main-text {
+  margin-top: 3vh;
+}
+
+nav {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  justify-items: stretch;
+  align-items: stretch;
+  column-gap: 2vw;
+  row-gap: 2vh;
+}
+
+.nav {
+  background-color: rgb(244, 214, 123);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#last {
+  grid-column: 1 / span 2;
+}
+
+aside {
+  background-color: rgb(193, 233, 179);
+  display: grid;
+  grid-area: aside;
+  justify-items: center;
+}
+
+.aside {
+  margin-top: 3vh;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer-wrapper {
+  height: 70%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: stretch;
+  align-items: stretch;
+  column-gap: 2.5vw;
+}
+
+.footer-section {
+  background-color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 10% 1fr 25%;
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
